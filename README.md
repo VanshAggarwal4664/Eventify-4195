@@ -1,4 +1,4 @@
-# Eventify-4195# Eventify-4195
+# Eventify
 
 Eventify-4195 is a web application designed to facilitate event management. It includes features for user authentication, event creation and management, real-time chat, and certificate distribution.
 
