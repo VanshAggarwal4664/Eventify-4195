@@ -22,10 +22,10 @@ const CertificateModal = ({setCreateModal,id}) => {
         event:id
     })
     // handle the creation of certificate 
-    const handleCreation=()=>{
+    const handleCreation= async ()=>{
       setLoader(true)
         try {
-            const response= axios.post("http://localhost:3000/api/v1/certificate/create-certificate",data,{
+            const response= await axios.post("http://localhost:3000/api/v1/certificate/create-certificate",data,{
                 headers:{
                     "Content-Type":"multipart/form-data"
                 },
@@ -33,6 +33,7 @@ const CertificateModal = ({setCreateModal,id}) => {
             })
 
             setLoader(false)
+            console.log(response)
             toast({
                 title: 'Certificate Created',
                 description: "Certificate Created Successfully for the event",
